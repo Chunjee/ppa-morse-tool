@@ -12,7 +12,7 @@ settings.msgboxTimeOut := 10 ; seconds
 this_appName := "ppa-morse-tool"
 
 morse := new morse()
-morse.dict["/"] := " " ; define "/" as a space or new word
+morse.dict["/"] := " " ; define "/" as new word
 inputString := ""
 
 ; middle click
@@ -49,7 +49,16 @@ return
 ; right click
 ~RButton::
 	if (captureInput) {
-		inputString .= "/"
+		inputString .= "-"
+	}
+return
+
+; space bar
+~XButton1::
+~XButton2::
+~Space::
+	if (captureInput) {
+		inputString .= " / "
 	}
 return
 
