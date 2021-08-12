@@ -21,6 +21,7 @@ inputString := ""
 	if (A_TimeSincePriorHotkey < 400) && (A_TimeSincePriorHotkey <> -1) {
 		; decode user input and msgbox if detection is already triggered
 		if (captureInput) {
+			inputString := strReplace(inputString, "  ", " / ")
 			result := morse.decode(inputString)
 			_stdOut(result)
 			msgbox,, % this_appName, % result, % settings.msgboxTimeOut
