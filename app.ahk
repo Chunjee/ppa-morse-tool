@@ -1,6 +1,5 @@
 SetBatchLines, -1
 #SingleInstance, Force
-#NoTrayIcon
 
 #Include %A_ScriptDir%\node_modules
 #Include morse.ahk\export.ahk
@@ -19,8 +18,8 @@ inputString := ""
 ; middle click
 ~MButton::
 	; detect double middle-click
-    if (A_TimeSincePriorHotkey < 400) && (A_TimeSincePriorHotkey <> -1) {
-        SoundBeep, 1000, 200
+	if (A_TimeSincePriorHotkey < 400) && (A_TimeSincePriorHotkey <> -1) {
+		SoundBeep, 1000, 200
 		; decode user input and msgbox if detection is already triggered
 		if (captureInput) {
 			result := morse.decode(inputString)
@@ -32,7 +31,7 @@ inputString := ""
 			return
 		}
 		captureInput := true
-    }
+	}
 	; handle middle-click as space between characters
 	if (captureInput) {
 		inputString .= " "
