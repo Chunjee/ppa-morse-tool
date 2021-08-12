@@ -19,7 +19,6 @@ inputString := ""
 ~MButton::
 	; detect double middle-click
 	if (A_TimeSincePriorHotkey < 400) && (A_TimeSincePriorHotkey <> -1) {
-		SoundBeep, 1000, 200
 		; decode user input and msgbox if detection is already triggered
 		if (captureInput) {
 			result := morse.decode(inputString)
@@ -30,6 +29,8 @@ inputString := ""
 			captureInput := false
 			return
 		}
+		; play sound so user knows input is ready
+		SoundBeep, 1000, 200
 		captureInput := true
 	}
 	; handle middle-click as space between characters
