@@ -1,11 +1,11 @@
 {
 	"name": "ppa-morse-tool",
 	"version": "0.1.0",
-	"description": "allows user to input morse code with mouse input",
+	"description": "Allows user to input morse code with mouse input",
 	"main": "app.ahk",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Chunjee/Wop_PPS2HTML"
+		"url": "https://github.com/Chunjee/ppa-morse-tool"
 	},
 	"dependencies": {
 		"morse.ahk": "^0.1.0"
