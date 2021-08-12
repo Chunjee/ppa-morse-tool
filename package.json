@@ -1,6 +1,6 @@
 {
 	"name": "ppa-morse-tool",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Allows user to input morse code with mouse input",
 	"main": "app.ahk",
 	"repository": {
